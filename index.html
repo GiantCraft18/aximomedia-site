@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f5f2">
+  <meta name="description" content="AXIMOMEDIA_RU — больше, чем просто медиа. Игры, технологии, развлечения и авторские проекты.">
+  <title>AXIMOMEDIA_RU — Больше, чем просто медиа</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#f5f5f2;--paper:#fff;--ink:#171717;--muted:#777873;--line:#e7e7e1;--accent:#b9f36a;--dark:#171914;--radius:24px}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none} button{font:inherit}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    header{height:82px;display:flex;align-items:center;border-bottom:1px solid var(--line);background:rgba(245,245,242,.88);backdrop-filter:blur(16px);position:sticky;top:0;z-index:10}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-size:17px;font-weight:800;letter-spacing:-.8px}.brand span{display:inline-block;width:9px;height:9px;background:#9edb48;border-radius:50%;margin-left:5px}
+    nav{display:flex;gap:30px;color:#65665f;font-size:13px;font-weight:600}nav a:hover{color:#111}
+    .nav-cta{padding:11px 17px;border:1px solid var(--line);border-radius:999px;font-size:12px;font-weight:700;background:white}
+    .hero{padding:100px 0 82px;display:grid;grid-template-columns:1.15fr .85fr;gap:54px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:11px;letter-spacing:1.7px;text-transform:uppercase;font-weight:800;color:#66685f}
+    .eyebrow:before{content:"";width:22px;height:1px;background:#9edb48}
+    h1{font-size:clamp(48px,7vw,86px);line-height:.99;letter-spacing:-6px;margin:25px 0 24px;font-weight:800}
+    h1 span{color:#8c8e85}
+    .lead{font-size:16px;line-height:1.8;color:#696b64;max-width:540px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:34px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 21px;border-radius:999px;font-size:13px;font-weight:800;transition:.2s}
+    .btn-dark{background:var(--dark);color:white}.btn-dark:hover{transform:translateY(-3px);background:#30352a}
+    .btn-light{background:white;border:1px solid var(--line)}.btn-light:hover{transform:translateY(-3px)}
+    .hero-art{min-height:410px;border-radius:32px;background:#e8eadf;position:relative;overflow:hidden;padding:30px;display:flex;align-items:flex-end}
+    .orb{position:absolute;width:310px;height:310px;border-radius:50%;background:linear-gradient(145deg,#d7ff9b,#9edb48);top:36px;right:12%;filter:blur(.2px)}
+    .orb:after{content:"";position:absolute;inset:30px;border:1px solid rgba(255,255,255,.55);border-radius:50%}
+    .orbit{position:absolute;width:390px;height:160px;border:1px solid rgba(23,25,20,.17);border-radius:50%;transform:rotate(-28deg);top:110px;right:-20px}
+    .orbit.two{transform:rotate(34deg);width:330px;height:220px;top:72px;right:10px}
+    .art-word{position:relative;z-index:1;font-size:clamp(38px,5vw,64px);font-weight:800;letter-spacing:-4px;line-height:.9}
+    .art-word small{display:block;font-size:11px;letter-spacing:2px;margin-top:17px;color:#55594c}
+    .art-index{position:absolute;top:28px;left:30px;font-size:11px;font-weight:800;letter-spacing:1.5px;color:#62665a}
+    section{padding:78px 0}.section-top{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-bottom:30px}
+    .kicker{font-size:11px;text-transform:uppercase;letter-spacing:1.7px;color:#85877e;font-weight:800}
+    h2{font-size:clamp(32px,4vw,48px);letter-spacing:-2.5px;line-height:1.05;margin:12px 0 0}
+    .section-note{color:var(--muted);font-size:13px;line-height:1.7;max-width:340px}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .about-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:30px;min-height:220px}
+    .about-card.dark{background:var(--dark);color:white;border-color:var(--dark)}
+    .about-card .number{font-size:12px;color:#9da095;font-weight:800;letter-spacing:1px}
+    .about-card h3{font-size:23px;letter-spacing:-1px;margin:35px 0 10px}
+    .about-card p{font-size:13px;line-height:1.8;color:#777970;margin:0;max-width:450px}
+    .about-card.dark p{color:#b7b9ae}
+    .topics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .topic{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;min-height:145px;display:flex;flex-direction:column;justify-content:space-between}
+    .topic .symbol{font-size:22px}.topic strong{font-size:14px}.topic span{font-size:11px;color:#8a8b84;margin-top:5px}
+    .socials{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .social{background:#fff;border:1px solid var(--line);border-radius:20px;padding:21px 23px;display:flex;align-items:center;gap:17px;transition:.2s}
+    .social:hover{transform:translateY(-3px);border-color:#c6d5b0;box-shadow:0 12px 30px rgba(30,35,20,.05)}
+    .social-icon{width:45px;height:45px;border-radius:14px;background:#f1f2ed;display:grid;place-items:center;font-size:18px;font-weight:800}
+    .social-info{flex:1}.social-info strong{display:block;font-size:14px}.social-info span{display:block;color:#888a81;font-size:11px;margin-top:4px}
+    .arrow{font-size:19px;color:#9a9c92}
+    .feature{background:var(--dark);color:white;border-radius:30px;padding:45px;display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center}
+    .feature .kicker{color:#b9f36a}.feature h2{max-width:600px}.feature p{color:#b8baaf;font-size:13px;line-height:1.8;max-width:550px}
+    .feature .btn{background:var(--accent);color:#171914;white-space:nowrap}
+    .contact{display:flex;justify-content:space-between;align-items:center;gap:24px;background:#e9ebdf;border-radius:26px;padding:35px}
+    .contact h2{font-size:34px}.contact p{color:#72756a;font-size:13px}
+    footer{padding:28px 0 36px;border-top:1px solid var(--line);color:#898b82;font-size:11px}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-brand{font-weight:800;color:#25271f;letter-spacing:-.4px}
+    @media(max-width:800px){.hero{grid-template-columns:1fr;padding:70px 0 50px;gap:35px}.hero-art{min-height:330px}.topics{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr;padding:32px}.section-top{align-items:flex-start;flex-direction:column}.contact{align-items:flex-start;flex-direction:column}}
+    @media(max-width:560px){.wrap{width:min(100% - 28px,1160px)}header{height:68px}nav{display:none}.nav-cta{padding:10px 13px}.hero{padding-top:58px}h1{letter-spacing:-3.5px}.hero-art{min-height:285px}.orb{width:230px;height:230px;right:5%}.orbit{width:300px}.about-grid,.socials{grid-template-columns:1fr}.about-card{min-height:190px}.topics{gap:9px}.topic{padding:17px;min-height:130px}section{padding:58px 0}.contact{padding:27px}.footer-inner{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">AXIMOMEDIA_RU<span></span></a>
+    <nav aria-label="Основная навигация"><a href="#about">О проекте</a><a href="#topics">Направления</a><a href="#socials">Площадки</a><a href="#contact">Контакты</a></nav>
+    <a class="nav-cta" href="#socials">Мои площадки ↗</a>
+  </div>
+</header>
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <div class="eyebrow">Independent media project</div>
+      <h1>Больше,<br>чем просто <span>медиа.</span></h1>
+      <p class="lead">AXIMOMEDIA_RU — пространство игр, технологий, развлечений и авторских проектов. Здесь встречаются идеи, контент и люди, которым интересно создавать и открывать новое.</p>
+      <div class="hero-actions">
+        <a class="btn btn-dark" href="https://www.youtube.com/@AximoMedia_RU" target="_blank" rel="noopener">Смотреть контент ↗</a>
+        <a class="btn btn-light" href="#about">Узнать о проекте</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-label="Графический элемент AXIMOMEDIA">
+      <div class="art-index">AM / 001 — CREATIVE SPACE</div><div class="orb"></div><div class="orbit"></div><div class="orbit two"></div>
+      <div class="art-word">AXIMO<small>CREATE · EXPLORE · SHARE</small></div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="section-top"><div><div class="kicker">01 / О проекте</div><h2>Медиа без<br>узких рамок.</h2></div><p class="section-note">Один проект — несколько форматов. Публикации, видео, трансляции и идеи объединены общим пространством.</p></div>
+      <div class="about-grid">
+        <article class="about-card dark"><div class="number">01 — ИДЕЯ</div><h3>Больше, чем просто медиа.</h3><p>AXIMOMEDIA_RU развивается как авторская площадка для разнообразного контента, экспериментов и общения с аудиторией.</p></article>
+        <article class="about-card"><div class="number">02 — ПОДХОД</div><h3>Разное содержание. Единый стиль.</h3><p>Игры, фильмы и сериалы, технологии, полезные материалы, короткие видео и собственные творческие проекты.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="topics">
+    <div class="wrap">
+      <div class="section-top"><div><div class="kicker">02 / Направления</div><h2>Что здесь есть.</h2></div><p class="section-note">Контент развивается вместе с проектом. Основные направления — уже здесь.</p></div>
+      <div class="topics">
+        <div class="topic"><div class="symbol">◈</div><div><strong>Игры и стримы</strong><span>Игровой контент и эфиры</span></div></div>
+        <div class="topic"><div class="symbol">▣</div><div><strong>Кино и сериалы</strong><span>Развлечения и впечатления</span></div></div>
+        <div class="topic"><div class="symbol">⌘</div><div><strong>Технологии</strong><span>Цифровой мир и новинки</span></div></div>
+        <div class="topic"><div class="symbol">✳</div><div><strong>Авторские проекты</strong><span>Идеи, творчество и эксперименты</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="socials">
+    <div class="wrap">
+      <div class="section-top"><div><div class="kicker">03 / Социальные сети</div><h2>Найди AXIMO<br>на своих площадках.</h2></div><p class="section-note">Подписывайся, смотри новые публикации и выбирай удобную платформу.</p></div>
+      <div class="socials">
+        <a class="social" href="https://www.youtube.com/@AximoMedia_RU" target="_blank" rel="noopener"><div class="social-icon">▶</div><div class="social-info"><strong>YouTube</strong><span>@AximoMedia_RU · Видео и Shorts</span></div><div class="arrow">↗</div></a>
+        <a class="social" href="https://rutube.ru/channel/38281222" target="_blank" rel="noopener"><div class="social-icon">R</div><div class="social-info"><strong>RuTube</strong><span>Видео и авторские материалы</span></div><div class="arrow">↗</div></a>
+        <a class="social" href="https://t.me/AximoMedia_RU" target="_blank" rel="noopener"><div class="social-icon">✈</div><div class="social-info"><strong>Telegram</strong><span>Новости и публикации проекта</span></div><div class="arrow">↗</div></a>
+        <a class="social" href="https://lolka.gg/2n8BaMFaH" target="_blank" rel="noopener"><div class="social-icon">L</div><div class="social-info"><strong>Lolka</strong><span>Стриминговая площадка</span></div><div class="arrow">↗</div></a>
+        <a class="social" href="https://www.twitch.tv/ravix_play" target="_blank" rel="noopener"><div class="social-icon">◉</div><div class="social-info"><strong>Twitch</strong><span>Ravix_Play · Прямые трансляции</span></div><div class="arrow">↗</div></a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap feature">
+      <div><div class="kicker">Stay connected</div><h2>Контент начинается с интереса.</h2><p>Выбирай площадку, подписывайся и следи за обновлениями AXIMOMEDIA_RU. Новые форматы и проекты будут появляться постепенно.</p></div>
+      <a class="btn" href="https://t.me/AximoMedia_RU" target="_blank" rel="noopener">Перейти в Telegram ↗</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div><div class="kicker">04 / Связь</div><h2>Есть идея?</h2><p>Открыт к предложениям, совместным проектам и коллаборациям.</p></div>
+      <a class="btn btn-dark" href="https://t.me/AximoMedia_RU" target="_blank" rel="noopener">Написать в Telegram ↗</a>
+    </div>
+  </section>
+</main>
+<footer><div class="wrap footer-inner"><div class="footer-brand">AXIMOMEDIA_RU</div><div>© <span id="year"></span> AXIMOMEDIA_RU. Больше, чем просто медиа.</div><a href="#top">Наверх ↑</a></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
