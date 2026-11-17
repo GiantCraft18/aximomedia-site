@@ -51,7 +51,7 @@
 | ▶️ YouTube | [AximoMedia_RU](https://www.youtube.com/@AximoMedia_RU) |
 | 🎬 RuTube | [Канал проекта](https://rutube.ru/channel/38281222) |
 | 🎮 Lolka | [Профиль](https://lolka.gg/2n8BaMFaH) |
-| 🟣 Twitch | [Ravix_Play](https://www.twitch.tv/aximomedia_ru) |
+| 🟣 Twitch | [AximoMedia_RU](https://www.twitch.tv/aximomedia_ru) |
 
 TikTok, VK и Instagram будут добавлены после подтверждения адресов профилей.
 
